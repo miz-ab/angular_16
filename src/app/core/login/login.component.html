@@ -11,7 +11,9 @@
             <mat-label>Title</mat-label>
             <input matInput formControlName="title" placeholder="Placeholder" />
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            <!-- <mat-hint>Hint</mat-hint> -->
+            <mat-error *ngIf="registrationForm.get('title')?.hasError('pattern')">
+                <!-- {{ log(registrationForm.get('title')?.getError) }} -->
+            </mat-error>
           </mat-form-field>
         </div>
 

@@ -29,7 +29,8 @@ export class ToastService {
       timerProgressBar: true,
       customClass: {
         popup: bgClasses[type],
-
+        timerProgressBar: 'custom-progress-bar',
+        icon: 'custom-icon-color'
       },
     });
   }
