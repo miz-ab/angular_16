@@ -25,9 +25,29 @@
           
         </div>
 
-        <div class="form-field-row"></div>
+        <div class="form-field-row">
+              <app-custom-input-field
+          label="Username"
+          placeholder="Enter Username"
+          [required]="true"
+          [disabled]="false"
+          errorMessage="Username is Required" 
+          [control]="usernameControl"
+        ></app-custom-input-field>
+        </div>
 
-        <div class="form-field-row"></div>
+        <div class="form-field-row">
+
+            <app-custom-input-field
+            label="Username"
+            placeholder="Enter Username"
+            [required]="true"
+            [disabled]="false"
+            errorMessage="Username is Required" 
+            [control]="usernameControl"
+          ></app-custom-input-field>
+            
+        </div>
 
         <div class="form-field-row"></div>
       </mat-card-content>
