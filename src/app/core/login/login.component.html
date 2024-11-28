@@ -1,1 +1,39 @@
-<p>ds;f,ds</p>
+<div class="body_">
+    <form [formGroup]="registrationForm">
+  <div class="card-section">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Default</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-field-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" placeholder="Placeholder" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </div>
+
+        <div class="form-field-row">
+          <mat-form-field appearance="outline">
+                <mat-label>Task</mat-label>
+                <textarea matInput formControlName="task" placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+          
+        </div>
+
+        <div class="form-field-row"></div>
+
+        <div class="form-field-row"></div>
+
+        <div class="form-field-row"></div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="submitTask()">Save</button>
+        <button mat-button>Cancle</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</form>
+</div>
