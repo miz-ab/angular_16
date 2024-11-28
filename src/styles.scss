@@ -24,17 +24,44 @@ $my-theme: mat.define-light-theme(
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.custom-toast-popup {
+// .custom-toast-popup {
+//   background-color: green !important; /* Green background */
+//   color: white !important;          /* White text */
+//   font-size: 16px;                  /* Adjust font size */
+//   border-radius: 10px;              /* Rounded corners */
+//   padding: 10px 20px;               /* Padding */
+//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+// }
+
+// .custom-progress-bar {
+//   background-color: white !important; /* White progress bar */
+//   height: 5px !important;            /* Adjust height */
+//   border-radius: 10px;               /* Rounded progress bar */
+// }
+
+.toast-success {
   background-color: green !important; /* Green background */
-  color: white !important;          /* White text */
-  font-size: 16px;                  /* Adjust font size */
-  border-radius: 10px;              /* Rounded corners */
-  padding: 10px 20px;               /* Padding */
+  color: white !important;           /* White text */
+  font-size: 16px;                   /* Adjust font size */
+  border-radius: 10px;               /* Rounded corners */
+  padding: 10px 20px;                /* Padding */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.custom-progress-bar {
-  background-color: white !important; /* White progress bar */
-  height: 5px !important;            /* Adjust height */
-  border-radius: 10px;               /* Rounded progress bar */
+.toast-error {
+  background-color: red !important;  /* Red background */
+  color: white !important;           /* White text */
+  font-size: 16px;                   /* Adjust font size */
+  border-radius: 10px;               /* Rounded corners */
+  padding: 10px 20px;                /* Padding */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Info Toast */
+.toast-info {
+  background-color: blue !important; /* Blue background */
+  color: white !important;           /* White text */
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
