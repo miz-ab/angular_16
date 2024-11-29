@@ -17,13 +17,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { CustomInputFieldComponent } from './core/custom-input-field/custom-input-field.component';
+import { TaskListComponent } from './core/task-list/task-list.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    CustomInputFieldComponent
+    CustomInputFieldComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { CustomInputFieldComponent } from './core/custom-input-field/custom-inpu
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
     SweetAlert2Module.forRoot()    
     
     

@@ -14,4 +14,8 @@ export class ApiService {
   postTask(task: Task){
     return this.http.post<Task>(`${this.baseUrl}`, task);
   }
+
+  getTaskList(){
+    return this.http.get<Task[]>(`${this.baseUrl}`);
+  }
 }
