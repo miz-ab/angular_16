@@ -18,7 +18,7 @@ export class TaskListComponent implements AfterViewInit, OnInit{
   public taskList!: TaskList[];
   dataSource!: MatTableDataSource<TaskList>;
 
-  displayedColumns: string[] = ['id', 'title', 'task'];
+  displayedColumns: string[] = ['id', 'title', 'task', 'action'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
