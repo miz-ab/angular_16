@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         Validators.compose([
           Validators.required,
           Validators.minLength(5),
-          Validators.pattern(this.char_num_only),
+          //Validators.pattern(this.char_num_only),
         ]),
       ],
       task: [''],
@@ -40,11 +40,14 @@ export class LoginComponent implements OnInit {
 
   public submitTask() {
     if (this.registrationForm.valid) {
+      console.log(`submited value ${this.registrationForm.value}`)
       this.api.postTask(this.registrationForm.value).subscribe((res) => {
         this.toast.showToast('success', 'Registration successful!', 'success');
         //this.toast.showToast('error', 'Registration error!', 'error');
         //this.toast.showToast('info', 'Info Message', 'info');
       });
+    }else {
+      this.toast.showToast('error', 'Registration error!', 'error');
     }
   }
 

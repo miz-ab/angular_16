@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from '../model/task.model';
+import { TaskList } from '../model/task-list.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,6 @@ export class ApiService {
   }
 
   getTaskList(){
-    return this.http.get<Task[]>(`${this.baseUrl}`);
+    return this.http.get<TaskList[]>(`${this.baseUrl}`);
   }
 }
