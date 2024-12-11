@@ -5,6 +5,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { TaskList } from 'src/app/model/task-list.model';
 import { ApiService } from 'src/app/service/api.service';
 import { Router } from '@angular/router';
+import { ToastService } from 'src/app/service/toast.service';
 
 
 
@@ -23,7 +24,7 @@ export class TaskListComponent implements AfterViewInit, OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api: ApiService, private router: Router){}
+  constructor(private api: ApiService, private router: Router, private toast:ToastService){}
 
   getTasks(){
     this.api.getTaskList()
@@ -41,12 +42,22 @@ export class TaskListComponent implements AfterViewInit, OnInit{
     })
   }
 
-  editTask(id : string){
-    console.log("passed id " + id);
-  }
-
   deleteTask(id : string){
-
+    if(confirm('Are You sure you want to delete this task?')){
+      this.api.deleteTask(id).subscribe({
+        next : () => {
+          this.toast.showToast(
+            'success',
+            'Task Deleted Successfully!',
+            'success'
+          );
+          this.getTasks();
+        },
+        error : (err) => {
+          this.toast.showToast('error', 'Registration error!', 'error');
+        }
+      })
+    }
   }
 
   

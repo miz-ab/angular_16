@@ -27,4 +27,8 @@ export class ApiService {
   updateTask(id: string, updatedTask: Task) {
     return this.http.put<Task>(`${this.baseUrl}/${id}`, updatedTask);
   }
+
+  deleteTask(id: string){
+    return this.http.delete(`${this.baseUrl}/${id}`)
+  }
 }
