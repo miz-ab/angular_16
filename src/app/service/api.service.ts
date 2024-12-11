@@ -19,4 +19,12 @@ export class ApiService {
   getTaskList(){
     return this.http.get<TaskList[]>(`${this.baseUrl}`);
   }
+
+  getTaskToEdited(id : string){
+    return this.http.get<Task>(`${this.baseUrl}/${id}`);
+  }
+
+  updateTask(id: string, updatedTask: Task) {
+    return this.http.put<Task>(`${this.baseUrl}/${id}`, updatedTask);
+  }
 }

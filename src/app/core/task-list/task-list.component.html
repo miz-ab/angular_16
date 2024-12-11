@@ -1,3 +1,4 @@
+<div class="main_body">
 <div class="d-flex justify-content-between">
    
     <mat-form-field appearance="outline">
@@ -35,7 +36,10 @@
           <button mat-icon-button [routerLink]="['/detail', row.id]" class="mx-2">
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="visibility"></mat-icon>
           </button>
-          <button mat-icon-button (click)="editTask(row.id)" class="mx-2" >
+          <button mat-icon-button 
+          [routerLink]="['/login']" 
+          [queryParams]="{ id: row.id }"
+          class="mx-2" >
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
           </button>
           <button (click)="deleteTask(row.id)" mat-icon-button color="primary">
@@ -55,3 +59,4 @@
   
     <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
+</div>

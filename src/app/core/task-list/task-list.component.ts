@@ -42,7 +42,7 @@ export class TaskListComponent implements AfterViewInit, OnInit{
   }
 
   editTask(id : string){
-
+    console.log("passed id " + id);
   }
 
   deleteTask(id : string){
