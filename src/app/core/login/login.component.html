@@ -10,7 +10,10 @@
         <div class="form-field-row">
           <mat-form-field appearance="outline">
             <mat-label>Title</mat-label>
-            <input matInput formControlName="title" placeholder="Placeholder" />
+            <input matInput formControlName="title" 
+                            placeholder="Placeholder" 
+                            [ngClass]="{'input-error': registrationForm.get('title')?.invalid && registrationForm.get('title')?.touched}"
+                            />
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-error *ngIf="registrationForm.get('title')?.hasError('required')">
                 <!-- {{ log(registrationForm.get('title')?.getError) }} -->
@@ -23,6 +26,9 @@
           <mat-form-field appearance="outline">
                 <mat-label>Task</mat-label>
                 <textarea matInput formControlName="task" placeholder="Ex. It makes me feel..."></textarea>
+                <mat-error *ngIf="registrationForm.get('task')?.hasError('required')">
+                    <p>Task Description is required</p>
+              </mat-error>
               </mat-form-field>
           
         </div>

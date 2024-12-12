@@ -13,13 +13,28 @@
             width: 100%;
             //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 
+            .mat-mdc-card-content {
+                .form-field-row {
+                    .mat-mdc-form-field {
+                        .input-error {
+                            border: 1px solid red;
+                            border-radius: 4px; 
+                          }
+                    }
+                }
+            }
+
             .form-field-row {
                 .mat-mdc-form-field{
                     width: 100%;
+
+                    
                 }
             }
         }
     }
+
+    
 }
 
 mat-error {

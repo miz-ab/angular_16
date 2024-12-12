@@ -61,7 +61,11 @@ export class LoginComponent implements OnInit {
           //Validators.pattern(this.char_num_only),
         ]),
       ],
-      task: [''],
+      task: ['',
+        Validators.compose([
+          Validators.required
+        ])
+      ],
       username: [''],
     });
   }
